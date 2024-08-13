@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סוכרת</title>
+    <link rel="stylesheet" href="/css/cours/quiz.css">
+</head>
+<body dir="rtl">
+    <div class="alertBack" id="alertBox">
+        <div class="alert">
+            <h3 class="alertTitle">ענית לא נכון מספר פעמים, עלייך לחזור שוב על השיעור</h3>
+            <button class="Button" id="alert" onclick="location.href='/cours/lesson4'">התחל מחדש</button>
+        </div>  
+    </div>
+    <h1 class="Title">סוכרת / שאלות</h1>
+    <div class="video">
+        <h1>מה הם ערכי הסוכר המעידים על היפוגליקמיה?</h1>
+        <div class="options">
+            <div>
+                <input type="radio" id="option1" class="inputs" name="fav_language" value="option1">
+                <label class="inputName" for="option1">מתחת ל80 mg%</label>
+            </div>
+            <div>
+                <input type="radio" id="option2" class="inputs" name="fav_language" value="option2">
+                <label class="inputName" for="option2">מתחת ל60 mg%</label>
+            </div>
+            <div>
+                <input type="radio" id="option3" class="inputs" name="fav_language" value="option3">
+                <label class="inputName" for="option3">מתחת ל120 mg%</label>
+            </div>
+            <div>
+                <input type="radio" id="option4" class="inputs" name="fav_language" value="option4">
+                <label class="inputName" for="option4">אין חשיבות למספר כל חולה סוכרת מחוסר הכרה נמצא בהיפוגליקמיה</label>
+            </div>
+        </div>
+        <button class="Button" id="chack">בדוק</button><br/>
+        <a style="color: red; display: none;" id="tryAgin">נסה שוב..</a>
+    </div>
+    <script>
+        const button = document.querySelector('#chack');
+        let rongA = 0;
+        button.addEventListener("click", () => {
+            if (document.getElementById("option2").checked == true) {
+               location.href='/cours/quiz13'
+            } else {
+                document.getElementById("tryAgin").style.display = 'block'
+                rongA++;
+                if(rongA >= 2) {
+                    document.getElementById("alertBox").style.display = 'flex'
+                    rongA = 0
+                }
+            }
+        })
+    </script>
+</body>
+</html>

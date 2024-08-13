@@ -1,0 +1,67 @@
+.videoControls {
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate(-50%);
+}
+
+.videoButton {
+    cursor: pointer;
+    font-size: 50px;
+    vertical-align: middle;
+}
+
+.videoButton:hover {
+    color: var(--color-primary);
+}
+
+.video {
+    width: 70%;
+    height: 80vh;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border: solid var(--color-primary) 1px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.Button {
+    width: 10%;
+    height: 5vh;
+    font-size: 30px;
+    background-color: var(--color-primary);
+    color: white;
+    border: 0;
+    font-family: var(--font-family);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.Button:hover {
+    background-color: var(--color-primary-dark);
+    cursor: pointer;
+}
+
+.Button:disabled {
+    background-color: var(--color-grey-dark);
+    color: white;
+}
