@@ -21,7 +21,7 @@ app.use('/cours', isAuthenticated, systemRouter)
 
 // Pages:
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {layout: 'layouts/guestLayout'})
 })
 
